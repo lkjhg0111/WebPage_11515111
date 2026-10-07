@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="藍天咖啡，為手沖咖啡愛好者挑選當季精品咖啡豆，讓每一杯都清澈、明亮、值得細品。">
-  <title>藍天咖啡｜讓風味，慢慢抵達</title>
+  <meta name="description" content="無天咖啡，推廣爆沖咖啡，為爆沖咖啡愛好者提供中階咖啡豆與咖啡風味推薦。">
+  <title>無天咖啡｜爆沖咖啡愛好者的中階咖啡豆</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;600;700;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
@@ -18,7 +18,10 @@
       --ink: #122534;
       --muted: #607482;
       --line: #d7e4e8;
-      --sand: #e5b66b;
+      --sand: #ffb347;
+      --accent-pink: #ff6f91;
+      --accent-green: #62d39b;
+      --accent-purple: #a78bfa;
       --shadow: 0 18px 50px rgba(6, 39, 66, .13);
     }
 
@@ -73,7 +76,7 @@
     }
     .button:hover { transform: translateY(-2px); }
     .button:focus-visible, a:focus-visible { outline: 3px solid var(--sky); outline-offset: 4px; }
-    .button-primary { color: var(--navy); background: var(--sand); box-shadow: 0 9px 22px rgba(1, 35, 59, .2); }
+    .button-primary { color: var(--navy); background: linear-gradient(90deg, var(--sand), #ffd166, var(--accent-pink)); box-shadow: 0 9px 22px rgba(1, 35, 59, .2); }
     .button-primary:hover { background: #f0c77f; }
     .button-outline { color: #fff; border-color: rgba(255,255,255,.58); }
     .button-outline:hover { background: rgba(255,255,255,.1); }
@@ -172,8 +175,8 @@
     .coffee-card { position: relative; min-height: 384px; overflow: hidden; color: #fff; background: var(--navy); box-shadow: var(--shadow); }
     .coffee-card::before { content: ""; position: absolute; right: -63px; bottom: -87px; width: 238px; height: 238px; border: 1px solid rgba(255,255,255,.29); border-radius: 50%; }
     .coffee-card::after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: linear-gradient(160deg, transparent 42%, rgba(0,0,0,.28)); pointer-events: none; }
-    .coffee-card:nth-child(2) { background: #106396; }
-    .coffee-card:nth-child(3) { background: #164c68; }
+    .coffee-card:nth-child(2) { background: linear-gradient(145deg, #106396, var(--accent-purple)); }
+    .coffee-card:nth-child(3) { background: linear-gradient(145deg, #164c68, var(--accent-green)); }
     .coffee-content { position: relative; z-index: 1; display: flex; flex-direction: column; min-height: 384px; padding: 29px; }
     .coffee-number { color: var(--sky); font: 600 13px/1 "Playfair Display", serif; letter-spacing: .08em; }
     .coffee-origin { margin: auto 0 7px; color: rgba(255,255,255,.63); font-size: 11px; font-weight: 600; letter-spacing: .14em; }
@@ -292,9 +295,9 @@
 <body>
   <header class="site-header" id="top">
     <nav class="nav wrap" aria-label="主要導覽">
-      <a class="brand" href="#top" aria-label="回到藍天咖啡首頁">
+      <a class="brand" href="#top" aria-label="回到無天咖啡首頁">
         <span class="brand-mark">B</span>
-        <span>藍天咖啡<small>BLUE SKY COFFEE</small></span>
+        <span>無天咖啡<small>WUTIAN COFFEE</small></span>
       </a>
       <button class="menu-toggle" type="button" aria-label="開啟導覽選單" aria-expanded="false" aria-controls="navLinks">☰</button>
       <div class="nav-links" id="navLinks">
@@ -307,17 +310,30 @@
   </header>
 
   <main>
+    <section class="intro" aria-label="品牌定位" style="padding:42px 0;background:linear-gradient(135deg,#fff7ed,#eefcf6,#f4efff);">
+      <div class="wrap">
+        <p class="eyebrow">WUTIAN BRAND POSITIONING</p>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;">
+          <div style="padding:18px;border:1px solid #ffd6a5;background:#fff;border-radius:8px;"><b>用途</b><br>推廣爆沖咖啡</div>
+          <div style="padding:18px;border:1px solid #ffb3c6;background:#fff;border-radius:8px;"><b>目標受眾</b><br>爆沖咖啡愛好者</div>
+          <div style="padding:18px;border:1px solid #b8e0d2;background:#fff;border-radius:8px;"><b>品牌風格</b><br>中階咖啡豆</div>
+          <div style="padding:18px;border:1px solid #c9b8ff;background:#fff;border-radius:8px;"><b>品牌顏色</b><br>彩色</div>
+          <div style="padding:18px;border:1px solid #a8d8ea;background:#fff;border-radius:8px;"><b>功能</b><br>勾引客戶消費咖啡</div>
+        </div>
+      </div>
+    </section>
+
     <section class="hero" aria-labelledby="heroTitle">
       <div class="hero-grid wrap">
         <div class="reveal">
           <p class="eyebrow">HAND BREWED · SLOWLY ROASTED</p>
-          <h1 class="hero-title" id="heroTitle">讓風味，<br>在<span class="blue">藍天</span>下<br>慢慢抵達。</h1>
-          <p class="hero-lede">藍天咖啡為喜歡手沖的你，挑選值得細品的單一產區咖啡豆。從第一縷花香，到最後一口回甘，每一杯都有自己的晴朗天氣。</p>
+          <h1 class="hero-title" id="heroTitle">爆沖風味，<br>在<span class="blue">無天</span>下<br>直接抵達。</h1>
+          <p class="hero-lede">無天咖啡專為爆沖咖啡愛好者而設，主打中階咖啡豆。用更鮮明、更有記憶點的風味，讓喜歡咖啡的人一眼找到想喝的那一杯。</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#coffee">探索本季風味 <span class="arrow">→</span></a>
-            <a class="button button-outline" href="#story">認識藍天</a>
+            <a class="button button-primary" href="#coffee">探索爆沖咖啡 <span class="arrow">→</span></a>
+            <a class="button button-outline" href="#story">認識無天咖啡</a>
           </div>
-          <p class="hero-note">TAIPEI · TAIWAN · EST. 2018</p>
+          <p class="hero-note">WUTIAN · TAIWAN · EST. 2018</p>
         </div>
         <div class="hero-art" aria-hidden="true">
           <div class="sun"></div>
@@ -333,14 +349,14 @@
       <div class="intro-grid wrap">
         <div class="intro-stamp reveal" aria-hidden="true">
           <div class="stamp-circle"><div><strong>慢一點，<br>更清楚。</strong><span>LET THE FLAVOUR SPEAK</span></div></div>
-          <div class="stamp-card"><b>BLUE SKY NOTE</b><p>一杯好咖啡，從來不是匆忙完成的事。</p></div>
+          <div class="stamp-card"><b>WUTIAN NOTE</b><p>一杯好咖啡，從來不是匆忙完成的事。</p></div>
         </div>
         <div class="reveal">
-          <p class="eyebrow">OUR PHILOSOPHY</p>
-          <h2 class="section-title" id="storyTitle">在一杯之間，<br>看見產地的<em>晴朗</em>。</h2>
-          <p class="section-copy">我們相信，精品咖啡的美好不該被複雜掩蓋。以小批次烘焙留住豆子的個性，再用穩定、誠實的手沖，讓風土與時間在杯中變得清晰。</p>
-          <p class="section-copy">給懂得放慢腳步的人，也給每一個想重新認識咖啡的人。</p>
-          <a class="intro-link" href="#brew">看看我們如何沖煮 <span>→</span></a>
+          <p class="eyebrow">WUTIAN COFFEE</p>
+          <h2 class="section-title" id="storyTitle">中階咖啡豆，<br>喝出屬於<em>爆沖</em>的風味。</h2>
+          <p class="section-copy">我們以中階咖啡豆為主軸，讓風味更容易親近，也保留咖啡本身的特色。從豆子的香氣到入口的層次，都希望讓爆沖咖啡愛好者喝得過癮。</p>
+          <p class="section-copy">給爆沖咖啡愛好者，也給想找一杯值得消費、值得回購咖啡的人。</p>
+          <a class="intro-link" href="#brew">看看爆沖怎麼沖 <span>→</span></a>
         </div>
       </div>
     </section>
@@ -348,8 +364,8 @@
     <section class="coffee-section" id="coffee" aria-labelledby="coffeeTitle">
       <div class="wrap">
         <div class="section-head reveal">
-          <div><p class="eyebrow">SEASONAL SELECTION</p><h2 class="section-title" id="coffeeTitle">今天，想喝哪一片<em>藍天</em>？</h2></div>
-          <p class="section-copy">三款當季單品，為不同的晨光、午後與靜夜而選。</p>
+          <div><p class="eyebrow">WUTIAN SELECTION</p><h2 class="section-title" id="coffeeTitle">今天，想喝哪一杯<em>爆沖</em>？</h2></div>
+          <p class="section-copy">精選中階咖啡豆，讓爆沖咖啡愛好者快速找到適合自己的風味。</p>
         </div>
         <div class="coffee-grid">
           <article class="coffee-card reveal">
@@ -389,9 +405,9 @@
           <div class="pour-ring"></div><div class="brew-v60"></div><p class="brew-caption">V60 / 15G : 240ML<br>2'45''</p>
         </div>
         <div class="reveal">
-          <p class="eyebrow">A QUIET RITUAL</p>
-          <h2 class="section-title" id="brewTitle">把時間交給水，<br>讓咖啡說<em>自己的話</em>。</h2>
-          <p class="section-copy">不需要繁複儀式，只要三個安靜的步驟。每一個參數，都是為了讓你更靠近豆子原本的樣子。</p>
+          <p class="eyebrow">BOLD COFFEE RITUAL</p>
+          <h2 class="section-title" id="brewTitle">把時間交給水，<br>讓爆沖咖啡說<em>自己的話</em>。</h2>
+          <p class="section-copy">不用複雜儀式，只要掌握三個步驟，就能把中階咖啡豆的風味沖出來，讓每一口都更有記憶點。</p>
           <ol class="brew-steps">
             <li><span class="step-no">01</span><span class="step-copy"><b>研磨，先聞見期待</b><span>15g 中細研磨，讓香氣從指尖開始展開。</span></span></li>
             <li><span class="step-no">02</span><span class="step-copy"><b>悶蒸，等待第一個呼吸</b><span>以 92°C 熱水浸潤 30 秒，喚醒甜感與層次。</span></span></li>
@@ -403,11 +419,11 @@
 
     <section class="visit" id="visit" aria-labelledby="visitTitle">
       <div class="wrap reveal">
-        <p class="eyebrow">THE BLUE SKY LETTER</p>
-        <h2 class="section-title" id="visitTitle">把下一杯好咖啡，<br>寄到你的日常裡。</h2>
-        <p>每月一封風味通信，分享新豆、沖煮靈感與只給會員的小小驚喜。</p>
+        <p class="eyebrow">WUTIAN COFFEE</p>
+        <h2 class="section-title" id="visitTitle">想喝爆沖咖啡，<br>就從無天開始。</h2>
+        <p>追蹤無天咖啡，取得中階咖啡豆推薦、新豆資訊與優惠，找到下一杯想消費的爆沖咖啡。</p>
         <form class="subscribe" id="subscribeForm">
-          <input type="email" aria-label="電子郵件地址" placeholder="留下你的 Email" required>
+          <input type="email" aria-label="電子郵件地址" placeholder="留下你的 Email，接收爆沖咖啡資訊" required>
           <button type="submit">訂閱風味通信</button>
         </form>
       </div>
@@ -416,11 +432,11 @@
 
   <footer>
     <div class="footer-top wrap">
-      <div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark">B</span><span>藍天咖啡<small>BLUE SKY COFFEE</small></span></a><p>為喜愛手沖咖啡的你，留下一段慢慢品味、微微放晴的時間。</p></div>
+      <div class="footer-brand"><a class="brand" href="#top"><span class="brand-mark">B</span><span>無天咖啡<small>WUTIAN COFFEE</small></span></a><p>為爆沖咖啡愛好者提供中階咖啡豆，讓每一杯都值得消費與回味。</p></div>
       <div><p class="footer-heading">EXPLORE</p><ul class="footer-list"><li><a href="#story">我們的堅持</a></li><li><a href="#coffee">本季選豆</a></li><li><a href="#brew">沖煮日常</a></li></ul></div>
-      <div><p class="footer-heading">CONTACT</p><ul class="footer-list"><li><a href="mailto:hello@bluesky.coffee">hello@bluesky.coffee</a></li><li>台北市大安區晴朗路 18 號</li><li>每日 10:00 — 19:00</li></ul></div>
+      <div><p class="footer-heading">CONTACT</p><ul class="footer-list"><li><a href="mailto:hello@wutian.coffee">hello@wutian.coffee</a></li><li>台北市大安區爆沖路 18 號</li><li>每日 10:00 — 19:00</li></ul></div>
     </div>
-    <div class="footer-bottom wrap"><span>© 2026 BLUE SKY COFFEE. ALL RIGHTS RESERVED.</span><span>BREW SLOW · LIVE BRIGHT</span></div>
+    <div class="footer-bottom wrap"><span>© 2026 WUTIAN COFFEE. ALL RIGHTS RESERVED.</span><span>BREW BOLD · LIVE BRIGHT</span></div>
   </footer>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
@@ -454,7 +470,7 @@
     document.getElementById('subscribeForm').addEventListener('submit', event => {
       event.preventDefault();
       event.currentTarget.reset();
-      showToast('謝謝訂閱，下一封晴朗的風味通信即將寄出。');
+      showToast('謝謝訂閱，下一次爆沖咖啡資訊即將寄出。');
     });
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -475,3 +491,4 @@
   </script>
 </body>
 </html>
+
